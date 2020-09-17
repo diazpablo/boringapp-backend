@@ -52,9 +52,12 @@ router.put('/update-likes', [ auth ], async (req, res) => {
 		likedActivities.splice(index, 1);
 	}
 
-	const user = await User.findByIdAndUpdate(req.user._id, { likedActivities });
-
-	res.send(user);
+	try {
+		const updatedUser = await User.findByIdAndUpdate(user._id, { likedActivities });
+		res.send(updatedUser);
+	} catch (e) {
+		return res.status(404).send("No user found.");
+	}
 
 });
 
