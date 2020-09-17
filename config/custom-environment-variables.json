@@ -1,5 +1,8 @@
 {
   "jwtPrivateKey": "boringapp_jwtPrivateKey",
   "db": "boringapp_db",
-  "customPassword": "boringapp_defPass"
+  "customPassword": "boringapp_defPass",
+  "cloudinary_name": "boringapp_cdn_name",
+  "cloudinary_api_key": "boringapp_cdn_api_key",
+  "cloudinary_api_secret": "boringapp_cdn_api_secret"
 }

@@ -19,10 +19,31 @@ Once you install MongoDB, make sure it's running. Then create a DB and set it up
 Next, from the project folder, install the dependencies:
 
     npm install
+    
+### Configure Cloudinary
+
+This project is develop to work with Cloudinary service. To setup the cloud static server you can get a free account here: 
+
+https://cloudinary.com/users/register/free
+
+From there you can set your environment variables:
+    
+On Mac:
+
+    export boringapp_cdn_name="Cloud name"
+    export boringapp_cdn_api_key="API Key" 
+    export boringapp_cdn_api_secret="API Secret" 
+
+On Windows:
+
+    set boringapp_cdn_name="Cloud name"
+    set boringapp_cdn_api_key="API Key" 
+    set boringapp_cdn_api_secret="API Secret" 
+
 
 ### Populate the Database
 
-There is a pre-built database data you can run next script, if you have problems seeding db check the package.json engines. Ensure you have set the defaults config variables or environment variables if you want to change theme.  
+There is a pre-built database data you can run next script, if you have problems seeding db check the package.json engines. Ensure you have set the default config variables or environment variables if you want to change them. The image within this is uploaded to cloudinary.  
 
     node seed.js
     
