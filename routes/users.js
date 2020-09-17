@@ -38,7 +38,7 @@ router.put('/update-likes', [ auth ], async (req, res) => {
 	if (!req.body) return res.status(400);
 
 	const { activityId } = req.body;
-	let { likedActivities } = user;
+	let { likedActivities } = req.user;
 
 	if (!likedActivities.includes(activityId)) {
 		try {
