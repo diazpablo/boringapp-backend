@@ -1,0 +1,5 @@
+{
+  "jwtPrivateKey": "boringapp_jwtPrivateKey",
+  "db": "boringapp_db",
+  "customPassword": "boringapp_defPass"
+}

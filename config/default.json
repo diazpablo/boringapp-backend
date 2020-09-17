@@ -1,0 +1,7 @@
+{
+  "jwtPrivateKey": "unsecureKey",
+  "db": "mongodb://localhost/boring-app",
+  "port": "3900",
+  "requiresAuth": true,
+  "customPassword": "unsecurePass"
+}
