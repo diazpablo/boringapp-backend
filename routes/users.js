@@ -39,13 +39,15 @@ router.put('/update-likes', [ auth ], async (req, res) => {
 
 	const { _id } = req.user;
 
+	let likedActivities = [];
+	let user;
 	try {
-		const user = await User.findById(_id);
+		user = await User.findById(_id);
+		likedActivities = user.likedActivities;
 	} catch (e) {
 		return res.status(404).send("No user found.");
 	}
 
-	const { likedActivities } = user;
 	const { activityId } = req.body;
 
 	if (!likedActivities.includes(activityId)) {
